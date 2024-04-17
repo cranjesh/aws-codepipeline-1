@@ -10,7 +10,7 @@ phases:
   build:
     commands:
       - npm test
-      - echo "Building docker image"
+      - echo "Building docker image."
       - pwd
       - docker build -t "docker-container-nodejs-lambda:latest" .
       - docker tag docker-container-nodejs-lambda:latest 598327188465.dkr.ecr.ap-southeast-2.amazonaws.com/docker-container-nodejs-lambda:latest
