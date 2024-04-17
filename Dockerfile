@@ -7,13 +7,13 @@ WORKDIR /var/task
 COPY app.js ./
 COPY package.json ./
 
-# Run npm install
-RUN npm install --omit=dev
-COPY node_modules ./
-
 # Log the working directory and list its contents
 RUN pwd && ls -al
 RUN ls -al ./
+
+# Run npm install
+RUN npm install --omit=dev
+COPY node_modules ./
 
 # CMD instruction
 CMD ["app.handler"]
