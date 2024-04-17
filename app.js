@@ -10,10 +10,10 @@ exports.handler = async (event) => {
         console.error(`npm command stderr: ${stderr}`);
     }
     console.log(`npm command stdout: ${stdout}`);
-          return {
-            statusCode: 200,
-            body: JSON.stringify({
-                message: 'Success'
-            })
-        };
+    return {
+        statusCode: 200,
+        body: JSON.stringify({
+            message: 'Success'
+        })
+    };
 }
