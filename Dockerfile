@@ -1,7 +1,7 @@
 FROM public.ecr.aws/lambda/nodejs:18
 COPY app.js ./
 COPY package.json ./
-RUN npm install --production
+RUN npm install --omit=dev
 COPY node_modules ./
 # default path for lambda files 
 # COPY test.csv /var/task/
