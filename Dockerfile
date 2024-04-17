@@ -3,4 +3,4 @@ COPY app.js ./
 # default path for lambda files 
 # COPY test.csv /var/task/
 # default path for lambda access /tmp
-CMD ["app.handler"]
+CMD ["app123.handler123"]
