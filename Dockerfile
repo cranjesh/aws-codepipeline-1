@@ -11,5 +11,9 @@ COPY package.json ./
 RUN npm install --omit=dev
 COPY node_modules ./
 
+# Log the working directory and list its contents
+RUN pwd && ls -al
+RUN ls -al ./
+
 # CMD instruction
 CMD ["app.handler"]
