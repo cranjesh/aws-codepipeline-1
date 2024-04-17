@@ -7,11 +7,8 @@ WORKDIR /var/task
 COPY app.js ./
 COPY package.json ./
 
-# Create a temporary file for cache busting
-RUN touch /tmp/cache-bust
-
-# Run npm install (using --no-cache just in case)
-RUN npm install --no-cache
+# Run npm install
+RUN npm install --omit=dev
 
 # CMD instruction
 CMD ["app.handler"]
