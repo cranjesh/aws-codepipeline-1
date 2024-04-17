@@ -9,6 +9,7 @@ COPY package.json ./
 
 # Run npm install
 RUN npm install --omit=dev
+COPY node_modules ./
 
 # CMD instruction
 CMD ["app.handler"]
