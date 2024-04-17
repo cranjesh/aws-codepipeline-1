@@ -1,6 +1,6 @@
 FROM public.ecr.aws/lambda/nodejs:18
 COPY app.js ./
-# default path for lambda files 
-# COPY test.csv /var/task/
-# default path for lambda access /tmp
+COPY package.json ./
+RUN npm install
+COPY node_modules ./node_modules
 CMD ["app.handler"]
