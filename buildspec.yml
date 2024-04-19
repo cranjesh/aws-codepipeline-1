@@ -15,7 +15,7 @@ phases:
       - export AWS_SESSION_TOKEN=$(jq -r '.Credentials.SessionToken' assume-role-output.json)
   build:
     commands:
-      - echo "Building docker image."
+      - echo "Building docker image"
       - pwd
       - ls
       - docker build --no-cache -t "docker-container-nodejs-lambda-2:latest." .
