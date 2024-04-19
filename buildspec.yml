@@ -23,5 +23,5 @@ phases:
       - docker images
       - docker login -u AWS -p $(aws ecr get-login-password --region ap-southeast-2) 975050300123.dkr.ecr.ap-southeast-2.amazonaws.com
       - docker push 975050300123.dkr.ecr.ap-southeast-2.amazonaws.com/docker-container-nodejs-lambda-2:latest
-      - aws lambda update-function-code --function-name docker-container-nodejs-lambda-2 --image-uri 598327188465.dkr.ecr.ap-southeast-2.amazonaws.com/docker-container-nodejs-lambda-2:latest
+      - aws lambda update-function-code --function-name docker-container-nodejs-lambda-2 --image-uri 975050300123.dkr.ecr.ap-southeast-2.amazonaws.com/docker-container-nodejs-lambda-2:latest
       - echo "done"
