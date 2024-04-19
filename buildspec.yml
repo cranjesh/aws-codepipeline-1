@@ -18,7 +18,7 @@ phases:
       - echo "Building docker image."
       - pwd
       - ls
-      - docker build --no-cache -t "docker-container-nodejs-lambda-2:latest." .
+      - docker build --no-cache -t "docker-container-nodejs-lambda-2:latest" .
       - docker tag docker-container-nodejs-lambda-2:latest 975050300123.dkr.ecr.ap-southeast-2.amazonaws.com/docker-container-nodejs-lambda-2:latest
       - docker images
       - docker login -u AWS -p $(aws ecr get-login-password --region ap-southeast-2) 975050300123.dkr.ecr.ap-southeast-2.amazonaws.com
