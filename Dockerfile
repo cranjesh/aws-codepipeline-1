@@ -7,7 +7,7 @@ WORKDIR /var/task
 COPY ./app.js .
 COPY ./package.json .
 
-# Run npm install 
+# Run npm install
 RUN npm install --omit=dev
 
 # CMD instruction
